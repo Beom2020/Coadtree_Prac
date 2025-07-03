@@ -5,11 +5,16 @@ using namespace std;
 int N;
 
 void PrintNLines(int n){
-    for(int i=0; i<n; i++){
-        for(int j=0; j<5; j++)
-            cout << "*";
-        cout << endl;
-    }
+    for(int i=0; i<n ;i++){
+        cout << "1";
+        cout << "1";
+        cout << "1";
+        cout << "1";
+        cout << "1";
+        cout << "1";
+        cout << "1";
+    } 
+    cout << endl;
 }
 
 
