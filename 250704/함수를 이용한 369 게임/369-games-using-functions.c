@@ -5,7 +5,13 @@ bool threesixnine(int n){
     int units = n % 10;
     int tens = n / 10;
 
-    return (units % 3 == 0 || tens % 3 ==0);
+    if(n<10){
+        return (n % 3 ==0);
+    }
+    else{
+        return (units % 3 == 0 || tens % 3 ==0);
+    }
+    
 }
 
 
