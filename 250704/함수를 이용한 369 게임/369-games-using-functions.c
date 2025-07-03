@@ -1,39 +1,35 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool threesixnine(int n){
-    int units = n % 10;
-    int tens = n / 10;
-
-    if(n<10){
-        return (n % 3 ==0);
+// 3, 6, 9가 숫자 안에 포함되어 있는지 확인
+bool contains369(int n) {
+    while (n > 0) {
+        int digit = n % 10;
+        if (digit == 3 || digit == 6 || digit == 9) {
+            return true;
+        }
+        n /= 10;
     }
-    else{
-        return (units % 3 == 0 || tens % 3 ==0);
-    }
-    
+    return false;
 }
 
-
-bool IsMagicNumber(int n){
-    return (n % 3 ==0 || threesixnine(n));
+// 369 게임 조건을 만족하는지 확인
+bool isMagicNumber(int n) {
+    return (n % 3 == 0) || contains369(n);
 }
-
-
-
 
 int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
-    // Please write your code here.
-
-    int count=0;
-    for(int i=a; i<b+1; i++){
-        if(IsMagicNumber(i))
+    int A, B;
+    int count = 0;
+    
+    scanf("%d %d", &A, &B);
+    
+    for (int i = A; i <= B; i++) {
+        if (isMagicNumber(i)) {
             count++;
+        }
     }
-
-    printf("%d",count);
-
+    
+    printf("%d\n", count);
     return 0;
 }
