@@ -6,15 +6,10 @@ int N;
 
 void PrintNLines(int n){
     for(int i=0; i<n ;i++){
-        cout << "1";
-        cout << "1";
-        cout << "1";
-        cout << "1";
-        cout << "1";
-        cout << "1";
-        cout << "1";
+        cout << "12345^&*()_";
+        cout << endl;
     } 
-    cout << endl;
+    
 }
 
 
