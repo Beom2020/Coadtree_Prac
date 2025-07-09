@@ -6,12 +6,22 @@ bool IsDayExist(int m, int d){
         31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 
     };
 
-    if(d <= month_day_range[m-1]){
-        return true;
+    //printf("m : %d d : %d month_day_range[m-1] : %d",m,d,month_day_range[m-1]);
+
+    if(m<13){
+        if(d <= month_day_range[m-1]){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     else{
         return false;
     }
+
+
+    
 }
 
 
